@@ -1,0 +1,8 @@
+{
+  "num_places": 6,
+  "num_gallery_images": 67,
+  "num_query_images": 34,
+  "skipped_corrupted": 0,
+  "skipped_small": 0,
+  "converted_grayscale": 0
+}

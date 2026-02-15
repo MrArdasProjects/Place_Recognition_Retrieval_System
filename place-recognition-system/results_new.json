@@ -1,0 +1,99 @@
+{
+  "gallery_embeddings": "embeddings_cache\\gallery_resnet50_aaa976b3.npz",
+  "query_embeddings": "embeddings_cache\\query_resnet50_22c0394f.npz",
+  "num_gallery": 70,
+  "num_queries": 34,
+  "feature_dim": 2048,
+  "top_k": 20,
+  "index_config": {
+    "index_type": "flat",
+    "use_faiss": false
+  },
+  "open_set_config": {
+    "strategy": "max_similarity",
+    "threshold": 0.5
+  },
+  "metrics": {
+    "recall@1": 0.8823529411764706,
+    "recall@5": 0.9411764705882353,
+    "recall@10": 1.0,
+    "recall@20": 1.0,
+    "mAP": 0.7687233922539961,
+    "num_queries": 34
+  },
+  "performance": {
+    "index_build_time_s": 0.0009844303131103516,
+    "total_search_time_s": 0.002960681915283203,
+    "avg_search_time_ms": 0.08707887986127068,
+    "total_queries": 34
+  },
+  "failure_analysis": {
+    "failure_top_k": 5,
+    "num_failures": 2,
+    "failure_rate": 0.058823529411764705,
+    "failures": [
+      {
+        "query_idx": 10,
+        "query_place_id": "Eiffel_Tower__lid_47378__line_47380",
+        "query_image_path": "Eiffel_Tower__lid_47378__line_47380/query/3b3e774767a97fe5.jpg",
+        "top1_place_id": "Antkabir__lid_197321__line_197323",
+        "top1_similarity": 0.7593581676483154,
+        "retrieved_place_ids": [
+          "Antkabir__lid_197321__line_197323",
+          "Grand_Canyon_National_Park__lid_44795__line_44797",
+          "Palace_of_Westminster__lid_80402__line_80404",
+          "Antkabir__lid_197321__line_197323",
+          "Grand_Canyon_National_Park__lid_44795__line_44797"
+        ]
+      },
+      {
+        "query_idx": 11,
+        "query_place_id": "Eiffel_Tower__lid_47378__line_47380",
+        "query_image_path": "Eiffel_Tower__lid_47378__line_47380/query/48e2a1df0a4463de.jpg",
+        "top1_place_id": "Palace_of_Westminster__lid_80402__line_80404",
+        "top1_similarity": 0.7968772053718567,
+        "retrieved_place_ids": [
+          "Palace_of_Westminster__lid_80402__line_80404",
+          "Buckingham_Palace__lid_116477__line_116479",
+          "Buckingham_Palace__lid_116477__line_116479",
+          "Antkabir__lid_197321__line_197323",
+          "Galata_Tower__lid_126501__line_126503"
+        ]
+      }
+    ],
+    "patterns": {
+      "total_failures": 4,
+      "confusion_pairs": [
+        [
+          [
+            "Eiffel_Tower__lid_47378__line_47380",
+            "Palace_of_Westminster__lid_80402__line_80404"
+          ],
+          2
+        ],
+        [
+          [
+            "Buckingham_Palace__lid_116477__line_116479",
+            "Eiffel_Tower__lid_47378__line_47380"
+          ],
+          1
+        ],
+        [
+          [
+            "Eiffel_Tower__lid_47378__line_47380",
+            "Antkabir__lid_197321__line_197323"
+          ],
+          1
+        ]
+      ],
+      "margin_stats": {
+        "mean": 0.012171626091003418,
+        "std": 0.009174764156341553,
+        "min": 0.0029968619346618652,
+        "max": 0.02134639024734497,
+        "count": 2
+      },
+      "complete_failures": 2
+    }
+  }
+}

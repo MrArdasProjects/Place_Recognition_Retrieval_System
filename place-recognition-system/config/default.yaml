@@ -1,0 +1,33 @@
+# Default configuration for Place Recognition System
+# This file defines all default parameters for the system
+
+# Reproducibility
+seed: 42
+
+# Device configuration (will auto-detect GPU if available)
+device: "cpu"
+
+# Data loading
+batch_size: 32
+num_workers: 4
+
+# Model configuration
+model_name: "resnet50"
+embedding_dim: 512
+
+# Retrieval configuration
+top_k: 5
+similarity_metric: "cosine"  # Options: cosine, euclidean
+
+# Index configuration
+index_type: "flat"  # Options: flat, ivf, hnsw
+
+# Paths (relative to project root)
+data_dir: "data"
+output_dir: "outputs"
+models_dir: "models"
+
+# Logging
+log_level: "INFO"
+log_to_file: false
+log_file: null

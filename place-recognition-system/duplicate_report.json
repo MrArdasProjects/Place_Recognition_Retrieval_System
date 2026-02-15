@@ -1,0 +1,49 @@
+{
+  "parameters": {
+    "hamming_threshold": 5,
+    "dataset_root": "..\\landmarks",
+    "manifest_dir": "manifests"
+  },
+  "statistics": {
+    "total_gallery_images": 67,
+    "total_query_images": 34,
+    "total_images_checked": 101
+  },
+  "exact_duplicates": {
+    "cross_split_count": 0,
+    "cross_split_duplicates": [],
+    "intra_gallery_count": 1,
+    "intra_gallery_duplicates": [
+      {
+        "md5": "504a2e777f4486740178b81dfe8a8142",
+        "images": [
+          "Antkabir__lid_197321__line_197323/gallery/WhatsApp Image 2026-02-14 at 16.25.34 (7).jpeg",
+          "Antkabir__lid_197321__line_197323/gallery/WhatsApp Image 2026-02-14 at 16.25.34 (8).jpeg"
+        ],
+        "count": 2
+      }
+    ],
+    "intra_query_count": 0,
+    "intra_query_duplicates": []
+  },
+  "near_duplicates": {
+    "total_pairs": 1,
+    "same_place_pairs": 1,
+    "different_place_pairs": 0,
+    "pairs": [
+      {
+        "query_image": "Antkabir__lid_197321__line_197323/query/5880ba6815434bc2.jpg",
+        "gallery_image": "Antkabir__lid_197321__line_197323/gallery/anitkabir_01.jpg",
+        "hamming_distance": 0,
+        "query_place_id": "Antkabir__lid_197321__line_197323",
+        "gallery_place_id": "Antkabir__lid_197321__line_197323",
+        "same_place": true
+      }
+    ]
+  },
+  "data_leakage_risk": {
+    "critical": false,
+    "warning": true,
+    "safe": false
+  }
+}
